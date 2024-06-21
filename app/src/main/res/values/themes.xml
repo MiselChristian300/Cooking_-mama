@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Aplikasi_baru" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Primary color. -->
+        <item name="colorPrimary">@color/orange</item>
+        <!-- Primary dark color. -->
+        <item name="colorPrimaryDark">@color/orange</item>
+        <!-- Primary variant color (if needed). -->
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/orange</item>
+        <!-- Navigation bar color (optional). -->
+        <item name="android:navigationBarColor">@color/orange</item>
+        <!-- Other theme attributes... -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Aplikasi_baru" parent="Base.Theme.Aplikasi_baru" />
+</resources>

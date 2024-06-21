@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/edit_text_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <corners android:radius="25dp"/> <!-- Adjust the radius as needed -->
+            <stroke android:width="1dp" android:color="#DDDDDD"/>
+        </shape>
+    </item>
+</selector>

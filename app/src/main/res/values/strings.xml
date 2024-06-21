@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cooking Mama</string>
+    <string name="screen1">Create!</string>
+    <string name="screen2">Chalange</string>
+    <string name="screen3">Look!</string>
+    <string name="screen1desc">Your Own Recepie</string>
+    <string name="screen2desc">Win and Get Gifts</string>
+    <string name="screen3desc">Look at all food</string>
+    <string name="startDesc"></string>
+</resources>

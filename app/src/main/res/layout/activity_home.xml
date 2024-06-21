@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homes1"
+    tools:context=".home">
+
+    <!-- ViewPager -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bg_started" />
+    </androidx.viewpager.widget.ViewPager>
+
+    <!-- TextView Categories -->
+    <TextView
+        android:id="@+id/tvCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Categories"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+    <!-- ConstraintLayout Categories -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCategories">
+
+        <!-- Breakfast -->
+        <ImageView
+            android:id="@+id/imgBreakfast"
+            android:layout_width="144dp"
+            android:layout_height="117dp"
+            android:src="@drawable/breakfest1"
+            android:onClick="to_detail"
+            app:layout_constraintEnd_toStartOf="@+id/imgLunch"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBreakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Breakfast"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/imgBreakfast"
+            app:layout_constraintStart_toStartOf="@id/imgBreakfast"
+            app:layout_constraintTop_toBottomOf="@id/imgBreakfast" />
+
+        <!-- Lunch -->
+        <ImageView
+            android:id="@+id/imgLunch"
+            android:layout_width="144dp"
+            android:layout_height="117dp"
+            android:src="@drawable/lunch1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/imgBreakfast"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Lunch"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/imgLunch"
+            app:layout_constraintStart_toStartOf="@id/imgLunch"
+            app:layout_constraintTop_toBottomOf="@id/imgLunch" />
+
+        <!-- Dinner -->
+        <ImageView
+            android:id="@+id/imgDinner"
+            android:layout_width="144dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/dinner1"
+            app:layout_constraintBottom_toTopOf="@+id/tvDinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBreakfast" />
+
+        <TextView
+            android:id="@+id/tvDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dinner"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvSnack"
+            app:layout_constraintHorizontal_bias="0.366"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Snack -->
+        <ImageView
+            android:id="@+id/imgSnack"
+            android:layout_width="144dp"
+            android:layout_height="117dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/snack1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/imgDinner"
+            app:layout_constraintTop_toBottomOf="@id/imgLunch" />
+
+        <TextView
+            android:id="@+id/tvSnack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            android:text="Snack"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/imgSnack"
+            app:layout_constraintStart_toStartOf="@id/imgSnack"
+            app:layout_constraintTop_toBottomOf="@id/imgSnack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ImageView dan TextView lainnya -->
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="71dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rounded_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_started" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:text="Carla"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="106dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/clCategories"
+        app:layout_constraintStart_toEndOf="@+id/tvCategories"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintVertical_bias="0.869"
+        app:srcCompat="@drawable/masakapa" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
